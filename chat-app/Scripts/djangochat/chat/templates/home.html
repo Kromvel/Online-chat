@@ -1,0 +1,20 @@
+{% extends "./base.html" %}
+
+{% block content %}
+<div class='center'>
+    <h2>{{ title }}</h2>
+</div>
+
+
+<div class="container">
+    <form id="post-form" method="POST" action="checkview">
+        {% csrf_token %}
+        <label>Название комнаты</label>
+        <input type="text" class="home-input-text" name="room_name" id="room_name" width="100px" />
+        <label>Имя пользователя</label>
+        <input type="text" class="home-input-text" name="username" id="username" width="100px" />
+        <input type="submit" class="home-input-submit" value="Зайти в комнату">
+    </form>
+</div>
+
+{% endblock %}
